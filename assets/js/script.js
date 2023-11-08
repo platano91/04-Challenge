@@ -41,3 +41,7 @@ let currentQuestionIndex = 0;
 let timer;
 let score = 0;
 let timeLeft = 60;
+
+// Event listeners
+startButton.addEventListener("click", startQuiz);
+initialsForm.addEventListener("submit", saveScore);
