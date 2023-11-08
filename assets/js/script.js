@@ -2,7 +2,7 @@
 const quizData = [
     {
         question: "What does the 'localStorage' object in JavaScript do?",
-        choices: ["Stores HTTP requests", "Stores data in the browser", "Stores all inventory", "Stores only health potions"],
+        choices: ["Stores HTTP requests", "Stores all inventory", "Stores only health potions", "Stores data in the browser"],
         correctAnswer: "Stores data in the browser",
     },
     {
@@ -12,7 +12,7 @@ const quizData = [
     },
     {
         question: "How is commenting done for JavaScript?",
-        choices: ["!--comment", "@comment", "//comment", "{comment}"],
+        choices: ["//comment", "!--comment", "@comment", "{comment}"],
         correctAnswer: "//comment",
     },
     {
