@@ -106,3 +106,25 @@ function endQuiz() {
     initialsForm.style.display = "block";
 }
 
+// Save score function
+function saveScore(event) {
+    event.preventDefault();
+  
+    const initials = initialsInput.value;
+  
+    if (initials) {
+        const scoreData = {
+            initials: initials,
+            score: score,
+      };
+  
+        const highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
+        highScores.push(scoreData);
+  
+        highScores.sort((a, b) => b.score - a.score);
+        const topScores = highScores.slice(0, 5);
+        localStorage.setItem("highScores", JSON.stringify(topScores));
+  
+        displayHighScores();
+    }
+}
