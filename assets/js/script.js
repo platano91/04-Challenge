@@ -106,7 +106,7 @@ function endQuiz() {
     initialsForm.style.display = "block";
 }
 
-// Save score function
+// Save player score function
 function saveScore(event) {
     event.preventDefault();
   
@@ -127,4 +127,17 @@ function saveScore(event) {
   
         displayHighScores();
     }
+}
+
+// Display high score function
+function displayHighScores() {
+    scoreboardDisplay.innerHTML = "<h2>High Scores</h2>";
+  
+    const highScores = JSON.parse(localStorage.getItem("highScores") || "[]");
+  
+    highScores.forEach((score, index) => {
+        const scoreEntry = document.createElement("p");
+        scoreEntry.textContent = `${index + 1}. ${score.initials} - ${score.score}`;
+        scoreboardDisplay.appendChild(scoreEntry);
+    });
 }
