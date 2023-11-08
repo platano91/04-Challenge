@@ -45,3 +45,10 @@ let timeLeft = 60;
 // Event listeners
 startButton.addEventListener("click", startQuiz);
 initialsForm.addEventListener("submit", saveScore);
+
+// Start quiz function
+function startQuiz() {
+    startButton.disabled = true;
+    timer = setInterval(updateTimer, 1000);
+    displayQuestion(currentQuestionIndex);
+}
