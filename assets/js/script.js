@@ -35,3 +35,9 @@ const choicesDisplay = document.getElementById("choices");
 const initialsForm = document.getElementById("initials-form");
 const initialsInput = document.getElementById("initials");
 const scoreboardDisplay = document.getElementById("scoreboard");
+
+// Quiz variables
+let currentQuestionIndex = 0;
+let timer;
+let score = 0;
+let timeLeft = 60;
