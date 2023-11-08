@@ -1,4 +1,4 @@
-//Questions
+// Define quiz questions
 const quizData = [
     {
         question: "What does the 'localStorage' object in JavaScript do?",
@@ -26,3 +26,12 @@ const quizData = [
         correctAnswer: "Adds Styling",
     },
 ];
+
+// DOM elements
+const startButton = document.getElementById("start");
+const timerDisplay = document.getElementById("timer");
+const questionDisplay = document.getElementById("question");
+const choicesDisplay = document.getElementById("choices");
+const initialsForm = document.getElementById("initials-form");
+const initialsInput = document.getElementById("initials");
+const scoreboardDisplay = document.getElementById("scoreboard");
