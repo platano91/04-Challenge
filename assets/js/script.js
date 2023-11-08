@@ -81,3 +81,20 @@ function displayQuestion(index) {
         choicesDisplay.appendChild(choiceButton);
     });
 }
+
+// Check answer function
+function checkAnswer(event) {
+    const selectedAnswer = event.target.textContent;
+    const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
+  
+    if (selectedAnswer === correctAnswer) {
+        score += 10;
+    } else {
+        timeLeft -= 10;
+        if (timeLeft < 0) timeLeft = 0;
+    }
+  
+    currentQuestionIndex++;
+    displayQuestion(currentQuestionIndex);
+}
+
