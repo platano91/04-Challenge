@@ -98,3 +98,11 @@ function checkAnswer(event) {
     displayQuestion(currentQuestionIndex);
 }
 
+// End the quiz function
+function endQuiz() {
+    clearInterval(timer);
+    questionDisplay.textContent = "Quiz Over!";
+    choicesDisplay.innerHTML = "";
+    initialsForm.style.display = "block";
+}
+
