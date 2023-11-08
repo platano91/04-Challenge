@@ -52,3 +52,14 @@ function startQuiz() {
     timer = setInterval(updateTimer, 1000);
     displayQuestion(currentQuestionIndex);
 }
+
+// Update timer function
+function updateTimer() {
+    timeLeft--;
+    timerDisplay.textContent = timeLeft + " seconds";
+  
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        endQuiz();
+    }
+}
