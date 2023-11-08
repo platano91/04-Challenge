@@ -63,3 +63,21 @@ function updateTimer() {
         endQuiz();
     }
 }
+
+// Display question function
+function displayQuestion(index) {
+    if (index >= quizData.length) {
+        endQuiz();
+        return;
+    }
+  
+    questionDisplay.textContent = quizData[index].question;
+    choicesDisplay.innerHTML = "";
+  
+    quizData[index].choices.forEach((choice) => {
+        const choiceButton = document.createElement("button");
+        choiceButton.textContent = choice;
+        choiceButton.addEventListener("click", checkAnswer);
+        choicesDisplay.appendChild(choiceButton);
+    });
+}
